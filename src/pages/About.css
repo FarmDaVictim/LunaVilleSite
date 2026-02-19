@@ -1,0 +1,16 @@
+.about {
+  text-align: center;
+}
+
+.about .page-section__content {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  text-align: left;
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.about .page-section__content p {
+  margin-bottom: var(--space-lg);
+}

@@ -1,0 +1,34 @@
+.yarn-ball-container {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.yarn-ball {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 0;
+  background: radial-gradient(circle at 30% 30%, #4dff28, #39FF14 50%, #2ed90f);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .yarn-ball-container {
+    right: 1rem;
+    bottom: 1rem;
+    width: 80px;
+    height: 80px;
+  }
+  .yarn-ball {
+    width: 20px;
+    height: 20px;
+  }
+}

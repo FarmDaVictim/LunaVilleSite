@@ -1,0 +1,8 @@
+.shop__intro {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.rug-grid--click .rug-grid__action--buy {
+  opacity: 1;
+}

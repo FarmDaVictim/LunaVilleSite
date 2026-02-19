@@ -1,0 +1,104 @@
+/* Lunaville - Brand Variables & Base Styles */
+:root {
+  /* Color Palette */
+  --color-black: #000000;
+  --color-neon-green: #39FF14;
+  --color-yellow: #FFFF00;
+  --color-yellow-soft: #FFD700;
+  --color-dark-gray: #333333;
+  --color-white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Bangers', 'Fredoka One', system-ui, cursive;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --h1-size: 48px;
+  --h2-size: 32px;
+  --body-size: 16px;
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  
+  --nav-height: 72px;
+  --content-max: 1200px;
+
+  /* Card system - space retro */
+  --card-bg: linear-gradient(160deg, rgba(12, 14, 12, 0.98) 0%, rgba(6, 8, 6, 0.99) 100%);
+  --card-border: 1px solid rgba(57, 255, 20, 0.2);
+  --card-accent: 3px solid var(--color-neon-green);
+  --card-radius: 6px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(57, 255, 20, 0.04);
+  --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(57, 255, 20, 0.08), inset 0 1px 0 rgba(57, 255, 20, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  background-color: var(--color-black);
+  color: var(--color-dark-gray);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -5%;
+  background-image:
+    linear-gradient(rgba(57, 255, 20, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+  animation: space-drift 25s ease-in-out infinite;
+}
+
+@keyframes space-drift {
+  0%, 100% {
+    transform: perspective(1200px) rotateX(3deg) scale(1);
+  }
+  50% {
+    transform: perspective(1200px) rotateX(8deg) scale(1.03);
+  }
+}
+
+/* Accessibility */
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-yellow-soft);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  color: var(--color-neon-green);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+
+p {
+  line-height: 1.65;
+}

@@ -1,0 +1,47 @@
+/* LUNAVILLE - Extra large, full-width span */
+.hero-yarn {
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.hero-yarn__text {
+  font-family: 'Bangers', 'Fredoka One', system-ui, cursive;
+  font-size: clamp(3rem, min(14vw, 10rem), 10rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0;
+  transform-style: preserve-3d;
+  color: #39FF14;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 3D depth - reduced glow */
+.hero-yarn__text {
+  text-shadow:
+    1px 1px 0 rgba(45, 217, 15, 0.95),
+    2px 2px 0 rgba(40, 200, 12, 0.9),
+    3px 3px 0 rgba(35, 180, 10, 0.85),
+    4px 4px 0 rgba(30, 160, 8, 0.8),
+    5px 5px 0 rgba(25, 140, 6, 0.75),
+    6px 6px 0 rgba(20, 120, 5, 0.7),
+    7px 7px 0 rgba(18, 105, 4, 0.65),
+    8px 8px 0 rgba(15, 90, 3, 0.6),
+    9px 9px 0 rgba(12, 75, 2, 0.55),
+    10px 10px 0 rgba(10, 65, 2, 0.5),
+    0 0 8px rgba(57, 255, 20, 0.2);
+  filter: drop-shadow(0 0 6px rgba(57, 255, 20, 0.25));
+}
+
+@media (max-width: 768px) {
+  .hero-yarn__text {
+    font-size: clamp(2.5rem, min(12vw, 5rem), 5rem);
+    letter-spacing: 0.02em;
+  }
+}

@@ -1,0 +1,92 @@
+/* Lunaville Logo - Interactive */
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #000;
+  border-radius: 50%;
+  border: 2px solid rgba(57, 255, 20, 0.5);
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.logo__circle .logo__text {
+  font-size: 1.1rem;
+  line-height: 0.95;
+  filter: none;
+}
+
+.logo__circle .logo__text::before,
+.logo__circle .logo__text::after {
+  display: none;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Bangers', 'Fredoka One', system-ui, cursive;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  position: relative;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo__text--tufted {
+  color: #39FF14;
+  font-weight: 700;
+}
+
+/* Protruding yarn strands - pseudo-elements */
+.logo__text--tufted::before,
+.logo__text--tufted::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  background: linear-gradient(180deg, #39FF14 0%, transparent 100%);
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+/* Top-right strand */
+.logo__text--tufted::before {
+  top: 0;
+  right: -8px;
+  transform: rotate(-25deg);
+}
+
+/* Bottom-left strand */
+.logo__text--tufted::after {
+  bottom: 0;
+  left: -10px;
+  transform: rotate(15deg);
+}
+
+.logo__line {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo__circle {
+    width: 64px;
+    height: 64px;
+    padding: 5px;
+  }
+  .logo__circle .logo__text {
+    font-size: 1.1rem;
+  }
+}

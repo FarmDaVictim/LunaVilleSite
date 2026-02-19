@@ -1,0 +1,40 @@
+.press__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.press__card {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-left: var(--card-accent);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem 1.5rem 1.5rem calc(1.5rem + 4px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+.press__card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(57, 255, 20, 0.35);
+  transform: translateY(-2px);
+}
+
+.press__card-title {
+  font-family: 'Bangers', 'Fredoka One', system-ui, cursive;
+  color: var(--color-neon-green);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.press__card-source {
+  color: var(--color-yellow);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.press__card-date {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+}

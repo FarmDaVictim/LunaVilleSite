@@ -1,0 +1,71 @@
+.rug-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.rug-carousel {
+  padding: 0.75rem 0;
+}
+
+.rug-carousel__track {
+  display: flex;
+  gap: 2.5rem;
+  animation: rug-scroll 50s linear infinite;
+  width: max-content;
+}
+
+.rug-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+.rug-carousel__item {
+  flex-shrink: 0;
+  width: 320px;
+  height: 260px;
+  overflow: visible;
+}
+
+.rug-carousel__item img {
+  transition: transform 0.3s ease;
+}
+
+.rug-carousel__item:hover img {
+  transform: scale(1.05);
+}
+
+.rug-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes rug-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .rug-carousel__item {
+    width: 220px;
+    height: 180px;
+  }
+  .rug-carousel__track {
+    gap: 1.5rem;
+    animation-duration: 40s;
+  }
+}
+
+@media (max-width: 480px) {
+  .rug-carousel__item {
+    width: 180px;
+    height: 150px;
+  }
+  .rug-carousel__track {
+    gap: 1.25rem;
+  }
+}

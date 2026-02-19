@@ -1,0 +1,41 @@
+/* Rocket - big, visible, closer to center, below astronaut */
+.rocket-ship-wrap {
+  position: absolute;
+  top: calc(var(--nav-height) + 14%);
+  left: 82%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.rocket-ship {
+  width: 380px;
+  transform: rotate(-25deg);
+  animation: rocket-hover ease-in-out 7s infinite alternate;
+}
+
+.rocket-ship img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.2));
+}
+
+@keyframes rocket-hover {
+  0% { transform: rotate(-25deg) translate(0, 0); }
+  100% { transform: rotate(-25deg) translate(12px, -18px); }
+}
+
+@media (max-width: 768px) {
+  .rocket-ship {
+    width: 220px;
+  }
+  .rocket-ship-wrap {
+    left: 82%;
+    top: calc(var(--nav-height) + 6%);
+  }
+  @keyframes rocket-hover {
+    0% { transform: rotate(-25deg) translate(0, 0); }
+    100% { transform: rotate(-25deg) translate(8px, -12px); }
+  }
+}

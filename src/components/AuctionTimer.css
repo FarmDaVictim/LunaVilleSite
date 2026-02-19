@@ -1,0 +1,19 @@
+.auction-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: 2px solid rgba(57, 255, 20, 0.5);
+  border-radius: 8px;
+}
+
+.auction-timer__label {
+  font-size: 0.75rem;
+  color: #39FF14;
+}
+
+.auction-timer__value {
+  font-weight: 600;
+  color: #fff;
+}

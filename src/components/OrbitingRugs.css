@@ -1,0 +1,39 @@
+.orbiting-rugs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.orbiting-rugs__item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  animation: float-drift 12s ease-in-out infinite;
+}
+
+.orbiting-rugs__item:nth-child(1) { left: 5%; top: 20%; animation-delay: 0s; }
+.orbiting-rugs__item:nth-child(2) { right: 8%; top: 30%; animation-delay: 2s; }
+.orbiting-rugs__item:nth-child(3) { left: 10%; bottom: 25%; animation-delay: 4s; }
+.orbiting-rugs__item:nth-child(4) { right: 5%; bottom: 15%; animation-delay: 6s; }
+
+.orbiting-rugs__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(57, 255, 20, 0.4));
+}
+
+@keyframes float-drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(8px, -10px) rotate(4deg); }
+  50% { transform: translate(-6px, -5px) rotate(-2deg); }
+  75% { transform: translate(-8px, 8px) rotate(3deg); }
+}
+
+@media (max-width: 768px) {
+  .orbiting-rugs__item {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,17 @@
+.page-placeholder {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.page-placeholder h1 {
+  margin-bottom: 1rem;
+}
+
+.page-placeholder p {
+  color: #333;
+}
