@@ -28,14 +28,24 @@
 
 @media (max-width: 768px) {
   .rocket-ship {
-    width: 220px;
+    width: 140px;
   }
   .rocket-ship-wrap {
-    left: 82%;
-    top: calc(var(--nav-height) + 6%);
+    left: 86%;
+    top: calc(var(--nav-height) + 4%);
   }
   @keyframes rocket-hover {
     0% { transform: rotate(-25deg) translate(0, 0); }
-    100% { transform: rotate(-25deg) translate(8px, -12px); }
+    100% { transform: rotate(-25deg) translate(5px, -8px); }
+  }
+}
+
+@media (max-width: 480px) {
+  .rocket-ship {
+    width: 110px;
+  }
+  .rocket-ship-wrap {
+    left: 88%;
+    top: calc(var(--nav-height) + 3%);
   }
 }

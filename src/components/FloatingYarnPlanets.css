@@ -81,40 +81,20 @@
   100% { transform: translate(-50%, -50%) translate(24px, -32px) rotate(2deg); }
 }
 
+/* Mobile: gentler animations, sizes from JS */
 @media (max-width: 768px) {
   .floating-yarn-planets__planet {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(0.55);
+    opacity: 0.65;
   }
   .floating-yarn-planets__astronaut {
-    width: 280px !important;
+    animation-name: astronaut-float-mobile !important;
   }
-  .floating-yarn-planets__astronaut {
-    animation-name: astronaut-float-mobile;
-  }
-  @keyframes yarn-drift-1 {
-    0% { transform: translate(-50%, -50%) scale(0.55) translate(0, 0); }
-    100% { transform: translate(-50%, -50%) scale(0.55) translate(14px, -16px); }
-  }
-  @keyframes yarn-drift-2 {
-    0% { transform: translate(-50%, -50%) scale(0.55) translate(0, 0); }
-    100% { transform: translate(-50%, -50%) scale(0.55) translate(-14px, 12px); }
-  }
-  @keyframes yarn-drift-3 {
-    0% { transform: translate(-50%, -50%) scale(0.55) translate(0, 0); }
-    100% { transform: translate(-50%, -50%) scale(0.55) translate(12px, 14px); }
-  }
-  @keyframes yarn-drift-4 {
-    0% { transform: translate(-50%, -50%) scale(0.55) translate(0, 0); }
-    100% { transform: translate(-50%, -50%) scale(0.55) translate(-12px, -14px); }
-  }
-  @keyframes yarn-drift-5 {
-    0% { transform: translate(-50%, -50%) scale(0.55) translate(0, 0); }
-    100% { transform: translate(-50%, -50%) scale(0.55) translate(-10px, 18px); }
+  .floating-yarn-planets--mobile .floating-yarn-planets__planet {
+    animation-duration: 12s !important;
   }
 }
 
 @keyframes astronaut-float-mobile {
-  0% { transform: translate(-50%, -50%) translate(0, 0); }
-  100% { transform: translate(-50%, -50%) translate(10px, -14px); }
+  0% { transform: translate(-50%, -50%) translate(0, 0) rotate(-1deg); }
+  100% { transform: translate(-50%, -50%) translate(6px, -8px) rotate(1deg); }
 }
